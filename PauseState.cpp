@@ -1,21 +1,19 @@
-#include <iostream>
-#include "MenuState.h"
-#include "PlayState.h"
+#include "PauseState.h"
 #include "GameState.h"
+#include "PlayState.h"
+#include "MenuState.h"
 #include "SFML/Graphics.hpp"
 
 using namespace sf;
-using namespace std;
 
-MenuState::MenuState(Game* game)
+PauseState::PauseState(Game* game)
 {
 	this->game = game;
 }
 
-void MenuState::HandleInput()
+void PauseState::HandleInput()
 {
 	Event event;
-
 	while (this->game->window.pollEvent(event))
 	{
 		switch (event.type)
@@ -24,35 +22,40 @@ void MenuState::HandleInput()
 			this->game->window.close();
 			break;
 		case Event::KeyPressed:
-			if(event.key.code == Keyboard::Escape)
+			if (event.key.code == Keyboard::Escape)
 			{
-				this->game->window.close();
+				GoToMenu();
 			}
 			else if (event.key.code == Keyboard::Enter)
 			{
-				LoadGame();
+				ResumeGame();
 			}
 			break;
 		}
 	}
 }
 
-void MenuState::Update(const float dt)
+void PauseState::Update(const float dt)
 {
 
 }
 
-void MenuState::Draw(const float dt)
+void PauseState::Draw(const float dt)
 {
 	sf::RectangleShape rect;
-	rect.setPosition(sf::Vector2f(100, 100));
+	rect.setPosition(sf::Vector2f(200, 200));
 	rect.setSize(sf::Vector2f(100, 100));
-	rect.setFillColor(sf::Color::Red);
+	rect.setFillColor(sf::Color::White);
 
 	game->window.draw(rect);
 }
 
-void MenuState::LoadGame()
+void PauseState::ResumeGame()
 {
 	game->PushState(new PlayState(game));
+}
+
+void PauseState::GoToMenu()
+{
+	game->PushState(new MenuState(game));
 }

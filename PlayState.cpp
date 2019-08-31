@@ -1,6 +1,7 @@
 #include "PlayState.h"
 #include "MenuState.h"
 #include "GameState.h"
+#include "PauseState.h"
 #include "SFML/Graphics.hpp"
 
 using namespace sf;
@@ -45,5 +46,5 @@ void PlayState::Draw(const float dt)
 
 void PlayState::PauseGame()
 {
-
+	game->PushState(new PauseState(game));
 }
