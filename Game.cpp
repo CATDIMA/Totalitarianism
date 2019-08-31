@@ -60,7 +60,7 @@ void Game::GameLoop()
 
 		//Вот здесь exception на случай пустого стека
 
-		CurrentState()->HandleEvent();
+		CurrentState()->HandleInput();
 		CurrentState()->Update(dt);
 
 		window.clear();

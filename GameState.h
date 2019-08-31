@@ -4,8 +4,10 @@
 class GameState
 {
 public:
+	Game *game;
+
 	virtual void Update(const float dt) = 0;
 	virtual void Draw(const float dt) = 0;
-	virtual void HandleEvent() = 0;
+	virtual void HandleInput() = 0;
 };
 

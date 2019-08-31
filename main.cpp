@@ -2,7 +2,7 @@
 #include <string>
 #include "Box2D/Box2D.h"
 #include "SFML/Graphics.hpp"
-#include "Game.h"
+#include "States.h"
 
 using namespace std;
 using namespace sf;
@@ -20,6 +20,8 @@ b2World World(NoGravity);
 int main()
 {
 	Game game(ResolutionX, ResolutionY, Vsync, Fullscreen);
+	
+	game.PushState(new MenuState(&game));
 
 	game.GameLoop();
 
