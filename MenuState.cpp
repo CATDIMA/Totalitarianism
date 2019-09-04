@@ -44,12 +44,7 @@ void MenuState::Update(const float dt)
 
 void MenuState::Draw(const float dt)
 {
-	sf::RectangleShape rect;
-	rect.setPosition(sf::Vector2f(100, 100));
-	rect.setSize(sf::Vector2f(100, 100));
-	rect.setFillColor(sf::Color::Red);
-
-	game->window.draw(rect);
+	game->window.draw(MenuSprite);
 }
 
 void MenuState::LoadGame()

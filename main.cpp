@@ -9,8 +9,8 @@ using namespace sf;
 
 const float SCALE = 30.0f;
 const float DEG = 57.29577f;
-int ResolutionX = 640;		//А потом это рефакторить что-ли?
-int ResolutionY = 480;		//
+int ResolutionX = 1024;		//А потом это рефакторить что-ли?
+int ResolutionY = 720;		//
 bool Vsync = true;			//А, ну да
 bool Fullscreen = false;	//БЛИН
 
