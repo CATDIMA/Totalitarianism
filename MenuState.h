@@ -13,10 +13,12 @@ public:
 	virtual void HandleInput();
 	virtual void Update(const float dt);
 	virtual void Draw(const float dt);
-
 private:
 	View view;
 	Sprite MenuSprite;
+	vector<Text> buttons;
+	Font font;
+	const unsigned int NUM_BUTTONS = 4;
 
 	void LoadGame();
 };
