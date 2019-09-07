@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "SFML/Graphics.hpp"
+#include "TextureManager.h"
 
 using namespace sf;
 
@@ -21,7 +22,6 @@ public:
 	void GameLoop();
 
 	RenderWindow window;
-
 private:
 	std::vector<GameState*> states;
 };

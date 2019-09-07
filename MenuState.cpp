@@ -9,6 +9,8 @@ using namespace std;
 
 MenuState::MenuState(Game* game)
 {
+	TextureManager& texture_manager = TextureManager::GetManager();
+	MenuSprite.setTexture(*(texture_manager.GetTexture("MenuBackground")));
 	this->game = game;
 }
 
