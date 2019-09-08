@@ -76,10 +76,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Dev\Totalitarianism\SFML-2.5.1\include;C:\Dev\Totalitarianism\Box2D\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Dev\Totalitarianism\SFML-2.5.1\include;D:\Dev\Totalitarianism\Box2D\include;C:\Dev\Totalitarianism\SFML-2.5.1\include;C:\Dev\Totalitarianism\Box2D\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Dev\Totalitarianism\SFML-2.5.1\lib;C:\Dev\Totalitarianism\Box2D\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\Dev\Totalitarianism\SFML-2.5.1\lib;D:\Dev\Totalitarianism\Box2D\lib;C:\Dev\Totalitarianism\SFML-2.5.1\lib;C:\Dev\Totalitarianism\Box2D\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;Box2D.lib;freetype.lib;opengl32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -89,10 +89,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Dev\Totalitarianism\SFML-2.5.1\include;C:\Dev\Totalitarianism\Box2D\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Dev\Totalitarianism\SFML-2.5.1\include;D:\Dev\Totalitarianism\Box2D\include;C:\Dev\Totalitarianism\SFML-2.5.1\include;C:\Dev\Totalitarianism\Box2D\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Dev\Totalitarianism\SFML-2.5.1\lib;C:\Dev\Totalitarianism\Box2D\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\Dev\Totalitarianism\SFML-2.5.1\lib;D:\Dev\Totalitarianism\Box2D\lib;C:\Dev\Totalitarianism\SFML-2.5.1\lib;C:\Dev\Totalitarianism\Box2D\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;Box2D.lib;freetype.lib;opengl32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -104,12 +104,12 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Dev\Totalitarianism\SFML-2.5.1\include;C:\Dev\Totalitarianism\Box2D\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Dev\Totalitarianism\SFML-2.5.1\include;D:\Dev\Totalitarianism\Box2D\include;C:\Dev\Totalitarianism\SFML-2.5.1\include;C:\Dev\Totalitarianism\Box2D\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Dev\Totalitarianism\SFML-2.5.1\lib;C:\Dev\Totalitarianism\Box2D\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\Dev\Totalitarianism\SFML-2.5.1\lib;D:\Dev\Totalitarianism\Box2D\lib;C:\Dev\Totalitarianism\SFML-2.5.1\lib;C:\Dev\Totalitarianism\Box2D\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;Box2D.lib;freetype.lib;opengl32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -121,12 +121,12 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Dev\Totalitarianism\SFML-2.5.1\include;C:\Dev\Totalitarianism\Box2D\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Dev\Totalitarianism\SFML-2.5.1\include;D:\Dev\Totalitarianism\Box2D\include;C:\Dev\Totalitarianism\SFML-2.5.1\include;C:\Dev\Totalitarianism\Box2D\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Dev\Totalitarianism\SFML-2.5.1\lib;C:\Dev\Totalitarianism\Box2D\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\Dev\Totalitarianism\SFML-2.5.1\lib;D:\Dev\Totalitarianism\Box2D\lib;C:\Dev\Totalitarianism\SFML-2.5.1\lib;C:\Dev\Totalitarianism\Box2D\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;Box2D.lib;freetype.lib;opengl32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

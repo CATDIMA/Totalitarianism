@@ -1,3 +1,4 @@
+#include <iostream>
 #include "PauseState.h"
 #include "GameState.h"
 #include "PlayState.h"
@@ -37,7 +38,7 @@ void PauseState::HandleInput()
 
 void PauseState::Update(const float dt)
 {
-
+	cerr << 1 / dt << endl;
 }
 
 void PauseState::Draw(const float dt)

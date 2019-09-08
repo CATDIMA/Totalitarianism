@@ -42,7 +42,7 @@ void MenuState::HandleInput()
 
 void MenuState::Update(const float dt)
 {
-
+	cerr << 1 / dt << endl;
 }
 
 void MenuState::Draw(const float dt)

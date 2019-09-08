@@ -30,7 +30,7 @@ void TextureManager::ReadTexturesBase()
 Texture* TextureManager::GetTexture(const string& ResourceName)
 {
 	string ErrorTexturePath = "images/Test.png";
-	Texture Error;
+	static Texture Error;
 	Error.loadFromFile(ErrorTexturePath);
 
 	auto itr = Resources.find(ResourceName);

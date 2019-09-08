@@ -1,3 +1,4 @@
+#include <iostream>
 #include "PlayState.h"
 #include "MenuState.h"
 #include "GameState.h"
@@ -31,7 +32,7 @@ void PlayState::HandleInput()
 
 void PlayState::Update(const float dt)
 {
-
+	cerr << 1 / dt << endl;
 }
 
 void PlayState::Draw(const float dt)
