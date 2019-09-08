@@ -17,9 +17,7 @@ void TextureManager::ReadTexturesBase()
 		while (!input.eof())
 		{
 			input >> resource >> path;
-			Texture* texture = new Texture;
-			texture->loadFromFile(path);
-			Textures.emplace(resource, texture);
+			Resources.emplace(resource, path);
 		}
 		input.close();
 	}
@@ -31,15 +29,31 @@ void TextureManager::ReadTexturesBase()
 
 Texture* TextureManager::GetTexture(const string& ResourceName)
 {
-	auto itr = Textures.find(ResourceName);
-	if (itr != Textures.end())
+	string ErrorTexturePath = "images/Test.png";
+	Texture Error;
+	Error.loadFromFile(ErrorTexturePath);
+
+	auto itr = Resources.find(ResourceName);
+	if (itr != Resources.end())
 	{
-		return itr->second;
+		auto it = Textures.find(ResourceName);
+		if (it == Textures.end())
+		{
+			Texture* texture = new Texture;
+			texture->loadFromFile(itr->second);
+			Textures.emplace(ResourceName, texture);
+			return texture;
+		}
+		else
+		{
+			return it->second;
+		}
+		
 	}
 	else
 	{
 		cerr << "ERROR. Can't find " << ResourceName << endl;
-		return nullptr;
+		return &Error;
 	}
 }
 

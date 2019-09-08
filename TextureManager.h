@@ -21,6 +21,7 @@ public:
 	}
 private:
 	map<string, Texture*> Textures;
+	map<string, string> Resources;
 
 	TextureManager() 
 	{
