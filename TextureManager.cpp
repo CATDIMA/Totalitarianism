@@ -47,8 +47,7 @@ Texture* TextureManager::GetTexture(const string& ResourceName)
 		else
 		{
 			return it->second;
-		}
-		
+		}	
 	}
 	else
 	{
@@ -64,7 +63,17 @@ void TextureManager::ClearBase()
 
 void TextureManager::DeleteResource(const string& ResourceName)
 {
-	Textures.erase(ResourceName);
+	auto itr = Textures.find(ResourceName);
+	if (itr != Textures.end())
+	{
+		delete itr->second;
+		Textures.erase(ResourceName);
+		cerr << "Resource: " << ResourceName << " deleted from Textures map" << endl;
+	}
+	else
+	{
+		cerr << "ERROR. " << ResourceName << " doesn't exist" << endl;
+	}
 }
 
 
