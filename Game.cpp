@@ -27,7 +27,16 @@ Game::~Game()
 
 void Game::PushState(GameState* state)
 {
-	states.push_back(state);
+	if (states.size() > 1)
+	{
+		states.push_back(state);
+		auto itr = states.begin();
+		states.erase(itr);
+	}
+	else
+	{
+		states.push_back(state);
+	}
 }
 
 void Game::PopState()
