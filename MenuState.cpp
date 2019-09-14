@@ -3,6 +3,8 @@
 #include "PlayState.h"
 #include "GameState.h"
 #include "SFML/Graphics.hpp"
+#include "entt.hpp"
+#include <cstdint>
 
 using namespace sf;
 using namespace std;
@@ -53,4 +55,11 @@ void MenuState::Draw(const float dt)
 void MenuState::LoadGame()
 {
 	game->PushState(new PlayState(game));
+	TextureManager& mManager = TextureManager::GetManager();	//Возможно пригодится при большом
+	mManager.DeleteResource("MenuBackground");				//количестве ресурсов
+}
+
+MenuState::~MenuState()
+{
+	
 }

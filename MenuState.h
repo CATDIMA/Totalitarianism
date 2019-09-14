@@ -9,6 +9,7 @@ class MenuState : public GameState
 public:
 	MenuState(Game* game);
 	MenuState() { }
+	~MenuState();
 
 	virtual void HandleInput();
 	virtual void Update(const float dt);

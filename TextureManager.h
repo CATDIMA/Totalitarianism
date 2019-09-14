@@ -13,6 +13,7 @@ public:
 	Texture* GetTexture(const string& ResourceName);
 	void ClearBase();
 	void DeleteResource(const string& ResourceName);
+	~TextureManager();
 	
 	static TextureManager& GetManager()
 	{

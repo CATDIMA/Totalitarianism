@@ -76,4 +76,7 @@ void TextureManager::DeleteResource(const string& ResourceName)
 	}
 }
 
-
+TextureManager::~TextureManager()
+{
+	Textures.clear();
+}
