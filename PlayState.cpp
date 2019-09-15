@@ -30,12 +30,12 @@ void PlayState::HandleInput()
 	}
 }
 
-void PlayState::Update(const float dt)
+void PlayState::Update(const float& dt)
 {
 	cerr << 1 / dt << endl;
 }
 
-void PlayState::Draw(const float dt)
+void PlayState::Draw(const float& dt)
 {
 	sf::RectangleShape rect;
 	rect.setPosition(sf::Vector2f(100, 100));

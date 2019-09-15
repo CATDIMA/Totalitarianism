@@ -11,8 +11,8 @@ public:
 	PlayState(Game* game);
 
 	virtual void HandleInput();
-	virtual void Update(const float dt);
-	virtual void Draw(const float dt);
+	virtual void Update(const float& dt);
+	virtual void Draw(const float& dt);
 private:
 	void PauseGame();
 };

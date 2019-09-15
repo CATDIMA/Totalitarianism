@@ -36,12 +36,12 @@ void PauseState::HandleInput()
 	}
 }
 
-void PauseState::Update(const float dt)
+void PauseState::Update(const float& dt)
 {
 	cerr << 1 / dt << endl;
 }
 
-void PauseState::Draw(const float dt)
+void PauseState::Draw(const float& dt)
 {
 	sf::RectangleShape rect;
 	rect.setPosition(sf::Vector2f(200, 200));

@@ -3,7 +3,6 @@
 #include "PlayState.h"
 #include "GameState.h"
 #include "SFML/Graphics.hpp"
-#include "entt.hpp"
 #include <cstdint>
 
 using namespace sf;
@@ -42,12 +41,12 @@ void MenuState::HandleInput()
 	}
 }
 
-void MenuState::Update(const float dt)
+void MenuState::Update(const float& dt)
 {
 	cerr << 1 / dt << endl;
 }
 
-void MenuState::Draw(const float dt)
+void MenuState::Draw(const float& dt)
 {
 	game->window.draw(MenuSprite);
 }

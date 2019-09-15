@@ -1,6 +1,8 @@
 #pragma once
 #include <stack>
+#include <iostream>
 #include "SFML/Graphics.hpp"
+#include "Box2D/Box2D.h"
 #include "TextureManager.h"
 
 using namespace sf;
@@ -22,6 +24,7 @@ public:
 	void GameLoop();
 
 	RenderWindow window;
+
 private:
 	std::stack<GameState*> states;
 };

@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{3e03a297-2eba-4308-b045-a111da899db5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TextureManager">
+      <UniqueIdentifier>{26286bcd-e3b5-4d11-b92c-cd7c7e41fd28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{9c1502ab-6fba-4a78-834f-a40446a56f34}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -22,39 +31,54 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="MenuState.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayState.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>States</Filter>
     </ClCompile>
     <ClCompile Include="PauseState.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayState.cpp">
+      <Filter>States</Filter>
     </ClCompile>
     <ClCompile Include="TextureManager.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticEntity.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicEntity.cpp">
+      <Filter>Entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameState.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>States</Filter>
+    </ClInclude>
     <ClInclude Include="MenuState.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="States.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayState.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>States</Filter>
     </ClInclude>
     <ClInclude Include="PauseState.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="States.h">
+      <Filter>States</Filter>
     </ClInclude>
     <ClInclude Include="TextureManager.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticEntity.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicEntity.h">
+      <Filter>Entity</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -14,12 +14,12 @@ int ResolutionX = 1024;		//А потом это рефакторить что-ли?
 int ResolutionY = 720;		//
 bool Vsync = true;			//А, ну да
 bool Fullscreen = false;	//БЛИН
-
-b2Vec2 NoGravity(0.0f, 0.0f);
-b2World World(NoGravity);
+b2Vec2 Gravity(0.0f, 0.0f);
+b2World World(Gravity);
 
 int main()
 {
+	
 	Game game(ResolutionX, ResolutionY, Vsync, Fullscreen);
 
 	game.PushState(new MenuState(&game));
