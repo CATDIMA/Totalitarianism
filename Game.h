@@ -1,5 +1,5 @@
 #pragma once
-#include <vector>
+#include <stack>
 #include "SFML/Graphics.hpp"
 #include "TextureManager.h"
 
@@ -23,5 +23,5 @@ public:
 
 	RenderWindow window;
 private:
-	std::vector<GameState*> states;
+	std::stack<GameState*> states;
 };

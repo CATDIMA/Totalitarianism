@@ -27,23 +27,13 @@ Game::~Game()
 
 void Game::PushState(GameState* state)
 {
-	if (states.size() > 1)
-	{
-		states.push_back(state);
-		auto itr = states.begin();
-		states.erase(itr);
-	}
-	else
-	{
-		states.push_back(state);
-	}
+	states.emplace(state);
 }
 
 void Game::PopState()
 {
-	states.back();
-	delete states.back();
-	states.pop_back();
+	delete states.top();
+	states.pop();
 }
 
 GameState* Game::CurrentState()
@@ -54,7 +44,7 @@ GameState* Game::CurrentState()
 	}
 	else
 	{
-		return states.back();
+		return states.top();
 	}
 }
 
