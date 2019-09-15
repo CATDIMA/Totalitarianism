@@ -48,6 +48,12 @@
     <ClCompile Include="DynamicEntity.cpp">
       <Filter>Entity</Filter>
     </ClCompile>
+    <ClCompile Include="SpriteCreater.cpp">
+      <Filter>TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -78,6 +84,12 @@
       <Filter>Entity</Filter>
     </ClInclude>
     <ClInclude Include="DynamicEntity.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteCreater.h">
+      <Filter>TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
       <Filter>Entity</Filter>
     </ClInclude>
   </ItemGroup>

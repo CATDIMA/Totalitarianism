@@ -25,4 +25,6 @@ public:
 	Vector2f GetPosition();
 	void Rotate(bool flag);							//true если может вращаться
 	void SetSprite(Texture& texture);
+	void SetScale(float scale);
+	float GetScale();
 };

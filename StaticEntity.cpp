@@ -37,3 +37,13 @@ void StaticEntity::SetSprite(Texture& texture)
 {
 	sprite.setTexture(texture);
 }
+
+void StaticEntity::SetScale(float scale)
+{
+	Scale = scale;
+}
+
+float StaticEntity::GetScale()
+{
+	return Scale;
+}

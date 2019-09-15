@@ -24,7 +24,7 @@ public:
 	void GameLoop();
 
 	RenderWindow window;
-
+	b2World* World;
 private:
 	std::stack<GameState*> states;
 };

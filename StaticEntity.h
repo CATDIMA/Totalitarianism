@@ -19,4 +19,6 @@ public:
 	void SetPosition(float pos_x, float pos_y);		//Координаты центра
 	Vector2f GetPosition();
 	void SetSprite(Texture& texture);
+	void SetScale(float scale);
+	float GetScale();
 };

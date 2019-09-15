@@ -53,3 +53,13 @@ void DynamicEntity::SetSprite(Texture& texture)
 {
 	sprite.setTexture(texture);
 }
+
+void DynamicEntity::SetScale(float scale)
+{
+	Scale = scale;
+}
+
+float DynamicEntity::GetScale()
+{
+	return Scale;
+}

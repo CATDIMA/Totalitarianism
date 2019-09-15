@@ -15,7 +15,8 @@ int ResolutionY = 720;		//
 bool Vsync = true;			//¿, ÌÛ ‰‡
 bool Fullscreen = false;	//¡À»Õ
 b2Vec2 Gravity(0.0f, 0.0f);
-b2World World(Gravity);
+b2World World(Gravity); 
+float GlobalScale = 1;
 
 int main()
 {

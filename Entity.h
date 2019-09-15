@@ -5,6 +5,8 @@
 
 using namespace sf;
 
+class EntityManager;
+
 class Entity
 {
 protected:
@@ -16,6 +18,7 @@ protected:
 
 	const float SCALE = 30.0f;		//перевод метров Box2D в пиксели
 	const float DEG = 57.29577f;	//радиан в градусах
+	float Scale = 1; 
 
 	Sprite sprite;					//Параметры спрайта
 	Vector2f Gr_Pos;
@@ -27,7 +30,6 @@ protected:
 
 	std::multimap<int, Entity*> Entities;	//TODO переместить в менеджер энтити
 
-public:
-	
+	friend EntityManager;
 };
 
