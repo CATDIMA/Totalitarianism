@@ -9,7 +9,7 @@ using namespace std;
 class TextureManager
 {
 public:
-	void ReadTexturesBase();
+	void ReadTexturesBase(const string& TexturesList);
 	Texture* GetTexture(const string& ResourceName);
 	void ClearBase();
 	void DeleteResource(const string& ResourceName);
@@ -24,8 +24,5 @@ private:
 	map<string, Texture*> Textures;
 	map<string, string> Resources;
 
-	TextureManager() 
-	{
-		ReadTexturesBase();
-	}
+	TextureManager() { }
 };

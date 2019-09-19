@@ -5,15 +5,16 @@
 #include <fstream>
 #include <iostream>
 
-void TextureManager::ReadTexturesBase()
+void TextureManager::ReadTexturesBase(const string& TexturesList)
 {
-	ifstream input("images/textures.txt");
+	string Input = "images/" + TexturesList + ".txt";
+	ifstream input(Input);
 	string path;
 	string resource;
 
 	if (input.is_open())
 	{
-		cerr << "images/textures.txt available" << endl;
+		cerr << Input << " available" << endl;
 		while (!input.eof())
 		{
 			input >> resource >> path;
@@ -23,7 +24,7 @@ void TextureManager::ReadTexturesBase()
 	}
 	else
 	{
-		cerr << "ERROR. Failed to load images/textures.txt" << endl;
+		cerr << "ERROR. Failed to load " << TexturesList << endl;
 	}
 }
 
@@ -58,7 +59,18 @@ Texture* TextureManager::GetTexture(const string& ResourceName)
 
 void TextureManager::ClearBase()
 {
+	if (Textures.size() != 0)
+	{
+		for (auto itr : Textures)
+		{
+			delete itr.second;
+		}
+	}
 	Textures.clear();
+	if (Textures.size() == 0)
+	{
+		cerr << "TEXTURE BASE CLEARED" << endl;
+	}
 }
 
 void TextureManager::DeleteResource(const string& ResourceName)

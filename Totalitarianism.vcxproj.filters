@@ -48,11 +48,11 @@
     <ClCompile Include="DynamicEntity.cpp">
       <Filter>Entity</Filter>
     </ClCompile>
-    <ClCompile Include="SpriteCreater.cpp">
-      <Filter>TextureManager</Filter>
+    <ClCompile Include="tinyxml2.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="EntityManager.cpp">
-      <Filter>Entity</Filter>
+    <ClCompile Include="SpriteCreator.cpp">
+      <Filter>TextureManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,11 +86,11 @@
     <ClInclude Include="DynamicEntity.h">
       <Filter>Entity</Filter>
     </ClInclude>
-    <ClInclude Include="SpriteCreater.h">
-      <Filter>TextureManager</Filter>
+    <ClInclude Include="tinyxml2.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="EntityManager.h">
-      <Filter>Entity</Filter>
+    <ClInclude Include="SpriteCreator.h">
+      <Filter>TextureManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

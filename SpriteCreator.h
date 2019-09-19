@@ -9,12 +9,13 @@ class SpriteCreator
 public:
 	static SpriteCreator& GetSpriteCreator()
 	{
-		SpriteCreator instance;
+		static SpriteCreator instance;
 		return instance;
 	}
 
-	Sprite CreateSprite(Texture& texture, float& scale);
+	Sprite CreateSprite(const std::string& ResourceName, float scale);
 private:
 	SpriteCreator() { }
 	Sprite sprite;
+	TextureManager& texture_manager = TextureManager::GetManager();
 };

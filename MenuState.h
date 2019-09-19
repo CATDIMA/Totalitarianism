@@ -1,6 +1,8 @@
 #pragma once
 #include "GameState.h"
 #include "SFML/Graphics.hpp"
+#include "TextureManager.h"
+#include "SpriteCreator.h"
 
 using namespace sf;
 
@@ -20,6 +22,8 @@ private:
 	vector<Text> buttons;
 	Font font;
 	const unsigned int NUM_BUTTONS = 4;
+	TextureManager& m_Manager = TextureManager::GetManager();
+	SpriteCreator& sprite_creator = SpriteCreator::GetSpriteCreator();
 
 	void LoadGame();
 };
