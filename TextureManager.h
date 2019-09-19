@@ -6,6 +6,8 @@
 using namespace sf;
 using namespace std;
 
+class SpriteManager;
+
 class TextureManager
 {
 public:
@@ -25,4 +27,6 @@ private:
 	map<string, string> Resources;
 
 	TextureManager() { }
+
+	friend SpriteManager;
 };

@@ -4,6 +4,8 @@
 
 using namespace sf;
 
+class SpriteManager;
+
 class SpriteCreator
 {
 public:
@@ -18,4 +20,6 @@ private:
 	SpriteCreator() { }
 	Sprite sprite;
 	TextureManager& texture_manager = TextureManager::GetManager();
+
+	friend SpriteManager;
 };

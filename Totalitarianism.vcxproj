@@ -142,6 +142,7 @@
     <ClCompile Include="PauseState.cpp" />
     <ClCompile Include="PlayState.cpp" />
     <ClCompile Include="SpriteCreator.cpp" />
+    <ClCompile Include="SpriteManager.cpp" />
     <ClCompile Include="StaticEntity.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="tinyxml2.cpp" />
@@ -155,6 +156,7 @@
     <ClInclude Include="PauseState.h" />
     <ClInclude Include="PlayState.h" />
     <ClInclude Include="SpriteCreator.h" />
+    <ClInclude Include="SpriteManager.h" />
     <ClInclude Include="States.h" />
     <ClInclude Include="StaticEntity.h" />
     <ClInclude Include="TextureManager.h" />

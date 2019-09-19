@@ -13,7 +13,7 @@ class Game
 {
 public:
 	Game(int ResolutionX, int ResolutionY, bool VSync, bool Fullscreen);
-	Game() {};
+	Game() {}
 	~Game();
 
 	void PushState(GameState *state);
@@ -24,7 +24,7 @@ public:
 	void GameLoop();
 
 	RenderWindow window;
-	b2World* World;
+	b2World* World = nullptr;
 private:
 	std::stack<GameState*> states;
 };

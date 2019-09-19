@@ -10,8 +10,8 @@ using namespace std;
 
 MenuState::MenuState(Game* game)
 {
-	m_Manager.ReadTexturesBase("textures");
-	MenuSprite = sprite_creator.CreateSprite("MenuBackground", 1.0f);
+	Sprite_Manager.FillTextureBase("textures");
+	MenuSprite = *(Sprite_Manager.GetSprite("MenuBackground", 1.0f));
 
 	this->game = game;
 }
@@ -53,11 +53,11 @@ void MenuState::Draw(const float& dt)
 
 void MenuState::LoadGame()
 {
-	game->PushState(new PlayState(game));						//Возможно пригодится при большом
-	m_Manager.ClearBase();										//количестве ресурсов
+	game->PushState(new PlayState(game));			//Возможно пригодится при большом
+	Sprite_Manager.ClearBase();						//количестве ресурсов
 }
 
 MenuState::~MenuState()
 {
-	m_Manager.ClearBase();
+	Sprite_Manager.ClearBase();
 }
