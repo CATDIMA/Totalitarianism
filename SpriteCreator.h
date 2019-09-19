@@ -5,6 +5,7 @@
 using namespace sf;
 
 class SpriteManager;
+class TextureManager;
 
 class SpriteCreator
 {
@@ -22,4 +23,5 @@ private:
 	TextureManager& texture_manager = TextureManager::GetManager();
 
 	friend SpriteManager;
+	friend TextureManager;
 };

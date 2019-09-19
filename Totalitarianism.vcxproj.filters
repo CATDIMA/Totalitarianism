@@ -22,6 +22,18 @@
     <Filter Include="Managers">
       <UniqueIdentifier>{26286bcd-e3b5-4d11-b92c-cd7c7e41fd28}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Managers\Images">
+      <UniqueIdentifier>{124056fc-6087-45fc-b04a-8d2da53567b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers\Entities">
+      <UniqueIdentifier>{dac9a231-9615-497d-9c13-e1674c84ddcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers\Maps">
+      <UniqueIdentifier>{24072d14-4200-4d40-a302-279620624957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers\Sounds">
+      <UniqueIdentifier>{87105ed3-2ff8-4dff-82c9-1bc1122733b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -39,9 +51,6 @@
     <ClCompile Include="PlayState.cpp">
       <Filter>States</Filter>
     </ClCompile>
-    <ClCompile Include="TextureManager.cpp">
-      <Filter>Managers</Filter>
-    </ClCompile>
     <ClCompile Include="StaticEntity.cpp">
       <Filter>Entity</Filter>
     </ClCompile>
@@ -52,10 +61,13 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="SpriteCreator.cpp">
-      <Filter>Managers</Filter>
+      <Filter>Managers\Images</Filter>
     </ClCompile>
     <ClCompile Include="SpriteManager.cpp">
-      <Filter>Managers</Filter>
+      <Filter>Managers\Images</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Managers\Images</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -77,9 +89,6 @@
     <ClInclude Include="States.h">
       <Filter>States</Filter>
     </ClInclude>
-    <ClInclude Include="TextureManager.h">
-      <Filter>Managers</Filter>
-    </ClInclude>
     <ClInclude Include="Entity.h">
       <Filter>Entity</Filter>
     </ClInclude>
@@ -93,10 +102,13 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="SpriteCreator.h">
-      <Filter>Managers</Filter>
+      <Filter>Managers\Images</Filter>
     </ClInclude>
     <ClInclude Include="SpriteManager.h">
-      <Filter>Managers</Filter>
+      <Filter>Managers\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Managers\Images</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

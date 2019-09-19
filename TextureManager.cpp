@@ -73,7 +73,7 @@ void TextureManager::ClearBase()
 	}
 }
 
-void TextureManager::DeleteResource(const string& ResourceName)
+/*void TextureManager::DeleteResource(const string& ResourceName)
 {
 	auto itr = Textures.find(ResourceName);
 	if (itr != Textures.end())
@@ -86,7 +86,7 @@ void TextureManager::DeleteResource(const string& ResourceName)
 	{
 		cerr << "ERROR. " << ResourceName << " doesn't exist" << endl;
 	}
-}
+}*/
 
 TextureManager::~TextureManager()
 {

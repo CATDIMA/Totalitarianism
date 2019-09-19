@@ -7,14 +7,14 @@ using namespace sf;
 using namespace std;
 
 class SpriteManager;
+class SpriteCreator;
 
 class TextureManager
 {
 public:
-	void ReadTexturesBase(const string& TexturesList);
 	Texture* GetTexture(const string& ResourceName);
-	void ClearBase();
-	void DeleteResource(const string& ResourceName);
+	
+	//void DeleteResource(const string& ResourceName);
 	~TextureManager();
 	
 	static TextureManager& GetManager()
@@ -26,7 +26,11 @@ private:
 	map<string, Texture*> Textures;
 	map<string, string> Resources;
 
+	void ReadTexturesBase(const string& TexturesList);
+	void ClearBase();
+
 	TextureManager() { }
 
 	friend SpriteManager;
+	friend SpriteCreator;
 };
