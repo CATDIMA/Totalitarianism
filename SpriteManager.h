@@ -23,7 +23,6 @@ public:
 	}
 private:
 	map<string, Sprite*> Sprites;
-	vector<Sprite> Tiles;
 	SpriteManager() {}
 	SpriteCreator& Sprite_Creator = SpriteCreator::GetSpriteCreator();
 };

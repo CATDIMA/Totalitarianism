@@ -1,1 +1,2 @@
 MenuBackground images/backgroundT.png
+Player images/playerR.png

@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "GameState.h"
 #include "SFML/Graphics.hpp"
+#include "Box2D/Box2D.h"
 
 using namespace sf;
 

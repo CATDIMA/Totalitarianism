@@ -24,7 +24,6 @@ public:
 	void GameLoop();
 
 	RenderWindow window;
-	b2World* World = nullptr;
 private:
 	std::stack<GameState*> states;
 };

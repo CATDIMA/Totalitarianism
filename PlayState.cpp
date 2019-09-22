@@ -4,6 +4,8 @@
 #include "GameState.h"
 #include "PauseState.h"
 #include "SFML/Graphics.hpp"
+#include "Player.h"
+#include "Entity.h"
 
 using namespace sf;
 
@@ -37,12 +39,10 @@ void PlayState::Update(const float& dt)
 
 void PlayState::Draw(const float& dt)
 {
-	sf::RectangleShape rect;
-	rect.setPosition(sf::Vector2f(100, 100));
-	rect.setSize(sf::Vector2f(100, 100));
-	rect.setFillColor(sf::Color::Green);
-
-	game->window.draw(rect);
+	for (auto itr : e.Entities)
+	{
+		itr->Draw(&(this->game->window));
+	}
 }
 
 void PlayState::PauseGame()

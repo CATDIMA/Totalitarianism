@@ -1,8 +1,6 @@
 #pragma once
 #include "GameState.h"
-#include "SFML/Graphics.hpp"
-
-using namespace sf;
+#include "Player.h"
 
 class PlayState : public GameState
 {
@@ -13,6 +11,8 @@ public:
 	virtual void HandleInput();
 	virtual void Update(const float& dt);
 	virtual void Draw(const float& dt);
+
 private:
 	void PauseGame();
+	Entity e;
 };
