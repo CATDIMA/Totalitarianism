@@ -1,6 +1,7 @@
 #pragma once
 #include "GameState.h"
 #include "Player.h"
+#include "EntityManager.h"
 
 class PlayState : public GameState
 {
@@ -15,4 +16,5 @@ public:
 private:
 	void PauseGame();
 	Entity e;
+	EntityManager& Entity_Manager = EntityManager::GetEntityManager();
 };

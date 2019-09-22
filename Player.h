@@ -17,6 +17,7 @@ public:
 
 	void Draw(RenderWindow *window) override;
 	void Update() override;
+
 private:
 	float Width, Height;
 	std::string tag = "Player";

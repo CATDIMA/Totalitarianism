@@ -75,6 +75,9 @@
     <ClCompile Include="Entity.cpp">
       <Filter>Entity</Filter>
     </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Managers\Entities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -115,6 +118,12 @@
     </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Player And Friends</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Managers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldContainer.h">
+      <Filter>Managers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

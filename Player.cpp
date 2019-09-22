@@ -21,8 +21,6 @@ Player::Player(float xpos, float ypos)
 	Body = World->CreateBody(&BodyDef);
 	Body->CreateFixture(&FixtureDef);
 	Body->SetUserData(&tag);
-
-	Entities.emplace_back(this);
 }
 
 Sprite Player::GetSprite()
@@ -37,5 +35,6 @@ void Player::Draw(RenderWindow* window)
 
 void Player::Update()
 {
-
+	
 }
+

@@ -3,6 +3,7 @@
 #include "SFML/Graphics.hpp"
 #include "Box2D/Box2D.h"
 #include "SpriteCreator.h"
+#include "WorldContainer.h"
 #include <vector>
 
 using namespace sf;
@@ -19,6 +20,9 @@ protected:
 	float density = 1.0f;
 	float friction = 1.0f;
 
+	SpriteCreator& Sprite_Creator = SpriteCreator::GetSpriteCreator();
+	WorldContainer& World_Container = WorldContainer::GetWorldContainer();
+
 	Sprite sprite;					//Параметры спрайта
 	Vector2f Gr_Pos;
 
@@ -29,16 +33,9 @@ protected:
 	b2PolygonShape Ph_Shape;
 	b2FixtureDef FixtureDef;
 	b2Body* Body = nullptr;
-	b2World* World = nullptr;
-
-	SpriteCreator& Sprite_Creator = SpriteCreator::GetSpriteCreator();
+	b2World* World = World_Container.GetWorld();
+	
 public:
-	static std::vector<Entity*> Entities;
-	void SetWorld(b2World* w)
-	{
-		World = w;
-	}
-
 	void SetPosition(float pos_x, float pos_y);		//Координаты центра
 	void SetVelocity(float vel_x, float vel_y);
 	b2Vec2 GetVelocity();
