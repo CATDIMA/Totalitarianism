@@ -44,7 +44,7 @@ public:
 	void SetSprite(Sprite& s);
 	void SetScale(float scale);
 	float GetScale();
-	virtual void Update() {};
-	virtual void Draw(RenderWindow* window) {};
+	virtual void Update() = 0;
+	virtual void Draw(RenderWindow* window) = 0;
 };
 

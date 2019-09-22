@@ -15,6 +15,5 @@ public:
 
 private:
 	void PauseGame();
-	Entity e;
 	EntityManager& Entity_Manager = EntityManager::GetEntityManager();
 };
