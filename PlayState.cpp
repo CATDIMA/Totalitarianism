@@ -12,8 +12,8 @@ using namespace sf;
 PlayState::PlayState(Game* game)
 {
 	this->game = game;
-	Player player(40.0f, 40.0f);
-	Entity_Manager.AddEntity(&player);
+	//Player player(40.0f, 40.0f);
+	Entity_Manager.AddEntity(&(Player(40.0f, 40.0f)));
 }
 
 void PlayState::HandleInput()

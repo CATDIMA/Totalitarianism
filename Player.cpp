@@ -8,7 +8,15 @@ Player::Player(float xpos, float ypos)
 	Ph_Pos.x = xpos / SCALE;
 	Ph_Pos.y = ypos / SCALE;
 
+	Height = 32.0f;
+	Width = 32.0f;
 	sprite = Sprite_Creator.CreateSprite("Player", 2.0f);
+
+	CurrentVelocity.x = 0;
+	CurrentVelocity.y = 0;
+	
+	MaxVelocity.x = 20.0f;
+	MaxVelocity.y = 20.0f;
 
 	Ph_Shape.SetAsBox(Width * Scale / SCALE, Height * Scale / SCALE);
 	FixtureDef.shape = &Ph_Shape;
