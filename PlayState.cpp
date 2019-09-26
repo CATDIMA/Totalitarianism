@@ -4,16 +4,15 @@
 #include "GameState.h"
 #include "PauseState.h"
 #include "SFML/Graphics.hpp"
-#include "Player.h"
 #include "Entity.h"
+#include "EntityManager.h"
 
 using namespace sf;
 
 PlayState::PlayState(Game* game)
 {
 	this->game = game;
-	//Player player(40.0f, 40.0f);
-	Entity_Manager.AddEntity(&(Player(40.0f, 40.0f)));
+	Entity_Manager.AddEntity(PLAYER, 40.0f, 40.0f);
 }
 
 void PlayState::HandleInput()
@@ -41,7 +40,7 @@ void PlayState::Update(const float& dt)
 
 void PlayState::Draw(const float& dt)
 {
-	Entity_Manager.GetEntityList()->Draw(&(this->game->window));
+	Entity_Manager.EntityDraw(&(this->game->window));
 }
 
 void PlayState::PauseGame()

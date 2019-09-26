@@ -7,11 +7,17 @@
 using namespace sf;
 using namespace std;
 
+enum EntitiesENUM
+{
+	PLAYER
+};
+
 class EntityManager
 {
 public:
-	void AddEntity(Entity* ent);
+	void AddEntity(EntitiesENUM p, float xpos, float ypos);
 	void Refresh();
+	void EntityDraw(RenderWindow* w);
 	Entity* GetEntityList();
 
 	static EntityManager& GetEntityManager()
