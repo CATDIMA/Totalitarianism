@@ -1,7 +1,9 @@
 #include "Player.h"
 
-Player::Player(float xpos, float ypos)
+Player::Player(float xpos, float ypos, float scale)
 {
+	Scale = scale;
+
 	Gr_Pos.x = xpos;
 	Gr_Pos.y = ypos;
 
@@ -11,9 +13,8 @@ Player::Player(float xpos, float ypos)
 	Height = 32.0f;
 	Width = 32.0f;
 	
-	sprite.setTexture(*(Texture_Manager.GetTexture("Player")));		//Костыль
+	sprite = *Sprite_Manager.GetSprite("Player", Scale);
 	sprite.setPosition(Gr_Pos);
-	sprite.setScale(Scale, Scale);
 
 	CurrentVelocity.x = 0;
 	CurrentVelocity.y = 0;

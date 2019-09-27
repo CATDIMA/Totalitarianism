@@ -2,6 +2,7 @@
 #include "GameState.h"
 #include "Player.h"
 #include "EntityManager.h"
+#include "SpriteManager.h"
 
 class PlayState : public GameState
 {
@@ -16,4 +17,5 @@ public:
 private:
 	void PauseGame();
 	EntityManager& Entity_Manager = EntityManager::GetEntityManager();
+	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
 };

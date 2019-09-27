@@ -22,6 +22,19 @@ void EntityManager::EntitiesDraw(RenderWindow* w)
 	}
 }
 
+void EntityManager::ClearBase()
+{
+	while (!Entities.empty())
+	{
+		for (auto itr : Entities)
+		{
+			delete itr;
+		}
+		Entities.clear();
+	}
+	if (Entities.empty()) cerr << "Entities destroyed" << endl;
+}
+
 int EntityManager::GetEntitiesSize()
 {
 	return Entities.size();

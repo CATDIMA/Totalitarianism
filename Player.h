@@ -1,7 +1,6 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "SpriteCreator.h"
-#include "TextureManager.h"
 #include "Entity.h"
 #include "Box2D/Box2D.h"
 #include "Game.h"
@@ -12,7 +11,7 @@ using namespace sf;
 class Player : public Entity
 {
 public:
-	Player(float xpos, float ypos);
+	Player(float xpos, float ypos, float scale);
 
 	Sprite GetSprite();
 
@@ -20,7 +19,7 @@ public:
 	void Update() override;
 
 private:
-	TextureManager& Texture_Manager = TextureManager::GetManager();		//Костыль	
+	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
 	float Width, Height;
 	std::string tag = "Player";
 };

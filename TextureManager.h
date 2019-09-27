@@ -14,7 +14,6 @@ class TextureManager
 public:
 	Texture* GetTexture(const string& ResourceName);
 	
-	//void DeleteResource(const string& ResourceName);
 	~TextureManager();
 	
 	static TextureManager& GetManager()

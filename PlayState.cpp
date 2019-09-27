@@ -11,8 +11,10 @@ using namespace sf;
 
 PlayState::PlayState(Game* game)
 {
+	Sprite_Manager.FillTextureBase("game");
+	Entity_Manager.AddEntity<Player>(40.0f, 40.0f, 4.0f);
+
 	this->game = game;
-	Entity_Manager.AddEntity<Player>(40.0f, 40.0f);
 }
 
 void PlayState::HandleInput()
@@ -46,5 +48,7 @@ void PlayState::Draw(const float& dt)
 
 void PlayState::PauseGame()
 {
+	Entity_Manager.ClearBase();
+	Sprite_Manager.ClearBase();
 	game->PushState(new PauseState(game));
 }

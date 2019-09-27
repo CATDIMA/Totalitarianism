@@ -20,9 +20,7 @@ public:
 private:
 	View view;
 	Sprite MenuSprite;
-	vector<Text> buttons;
-	Font font;
-	const unsigned int NUM_BUTTONS = 4;
+
 	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
 
 	void LoadGame();

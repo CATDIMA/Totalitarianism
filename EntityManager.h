@@ -11,14 +11,15 @@ class EntityManager
 {
 public:
 	template <class T>
-	void AddEntity(float xpos, float ypos)
+	void AddEntity(float xpos, float ypos, float scale)
 	{
-		T* ent = new T(xpos, ypos);
+		T* ent = new T(xpos, ypos, scale);
 		Entities.emplace_back(ent);
 	}
 
 	void Refresh();
 	void EntitiesDraw(RenderWindow* w);
+	void ClearBase();
 	int GetEntitiesSize();
 	Entity* GetEntityList();
 
