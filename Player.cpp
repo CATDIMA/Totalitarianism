@@ -10,7 +10,10 @@ Player::Player(float xpos, float ypos)
 
 	Height = 32.0f;
 	Width = 32.0f;
-	sprite = Sprite_Creator.CreateSprite("Player", 2.0f);
+	
+	sprite.setTexture(*(Texture_Manager.GetTexture("Player")));		//Костыль
+	sprite.setPosition(Gr_Pos);
+	sprite.setScale(Scale, Scale);
 
 	CurrentVelocity.x = 0;
 	CurrentVelocity.y = 0;

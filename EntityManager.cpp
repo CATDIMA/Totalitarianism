@@ -6,29 +6,14 @@
 
 using namespace std;
 
-void EntityManager::AddEntity(EntitiesENUM e, float xpos, float ypos)
-{
-	switch (e)
-	{
-	case EntitiesENUM::PLAYER:
-	{
-		Player* ent = new Player(xpos, ypos);
-		Entities.push_back(ent);
-		break;
-	}
-	default:
-		break;
-	}
-}
-
 void EntityManager::Refresh()
 {
 	cerr << Entities.size() << endl;
 }
 
-void EntityManager::EntityDraw(RenderWindow* w)
+void EntityManager::EntitiesDraw(RenderWindow* w)
 {
-	if (!(Entities.empty()))
+	if (!Entities.empty())
 	{
 		for (auto itr : Entities)
 		{
@@ -37,7 +22,7 @@ void EntityManager::EntityDraw(RenderWindow* w)
 	}
 }
 
-int EntityManager::ReturnEntitiesSize()
+int EntityManager::GetEntitiesSize()
 {
 	return Entities.size();
 }
@@ -52,6 +37,7 @@ Entity* EntityManager::GetEntityList()
 		}
 	}
 	else
+	{
 		return nullptr;
+	}
 }
-

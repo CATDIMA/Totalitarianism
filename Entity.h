@@ -2,7 +2,7 @@
 #include <map>
 #include "SFML/Graphics.hpp"
 #include "Box2D/Box2D.h"
-#include "SpriteCreator.h"
+#include "SpriteManager.h"
 #include "WorldContainer.h"
 #include <vector>
 
@@ -12,7 +12,7 @@ class Entity
 {
 public:
 	Entity() {}
-	~Entity() {}
+	virtual ~Entity() {}
 protected:
 	const float SCALE = 30.0f;		//перевод метров Box2D в пиксели
 	const float DEG = 57.29577f;	//радиан в градусах
@@ -20,7 +20,7 @@ protected:
 	float density = 1.0f;
 	float friction = 1.0f;
 
-	SpriteCreator& Sprite_Creator = SpriteCreator::GetSpriteCreator();
+	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
 	WorldContainer& World_Container = WorldContainer::GetWorldContainer();
 
 	Sprite sprite;					//Параметры спрайта

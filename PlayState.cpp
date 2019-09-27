@@ -12,7 +12,7 @@ using namespace sf;
 PlayState::PlayState(Game* game)
 {
 	this->game = game;
-	Entity_Manager.AddEntity(PLAYER, 40.0f, 40.0f);
+	Entity_Manager.AddEntity<Player>(40.0f, 40.0f);
 }
 
 void PlayState::HandleInput()
@@ -36,11 +36,12 @@ void PlayState::HandleInput()
 void PlayState::Update(const float& dt)
 {
 	cerr << 1 / dt << endl;
+	//Обновляем энтити
 }
 
 void PlayState::Draw(const float& dt)
 {
-	Entity_Manager.EntityDraw(&(this->game->window));
+	Entity_Manager.EntitiesDraw(&(this->game->window));
 }
 
 void PlayState::PauseGame()

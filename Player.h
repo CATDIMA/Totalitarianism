@@ -1,6 +1,7 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "SpriteCreator.h"
+#include "TextureManager.h"
 #include "Entity.h"
 #include "Box2D/Box2D.h"
 #include "Game.h"
@@ -19,6 +20,7 @@ public:
 	void Update() override;
 
 private:
+	TextureManager& Texture_Manager = TextureManager::GetManager();		//Костыль	
 	float Width, Height;
 	std::string tag = "Player";
 };
