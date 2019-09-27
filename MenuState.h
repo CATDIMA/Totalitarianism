@@ -20,7 +20,6 @@ public:
 private:
 	View view;
 	Sprite MenuSprite;
-
 	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
 
 	void LoadGame();

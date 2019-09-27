@@ -16,7 +16,7 @@ public:
 		return instance;
 	}
 
-	Sprite CreateSprite(const std::string& ResourceName, float scale);
+	Sprite CreateSprite(const std::string& ResourceName, float scale, IntRect r);
 private:
 	SpriteCreator() { }
 	Sprite sprite;

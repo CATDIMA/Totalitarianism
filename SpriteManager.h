@@ -14,7 +14,7 @@ class SpriteManager
 public:
 	void ClearBase();
 	void FillTextureBase(const string& TextureList);
-	Sprite* GetSprite(const string& ResourceName, float scale);
+	Sprite* GetSprite(const string& ResourceName, float scale, IntRect r);
 
 	static SpriteManager& GetSpriteManager()
 	{

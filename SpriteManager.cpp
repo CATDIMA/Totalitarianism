@@ -28,7 +28,7 @@ void SpriteManager::FillTextureBase(const string& TextureList)
 	Sprite_Creator.texture_manager.ReadTexturesBase(TextureList);
 }
 
-Sprite* SpriteManager::GetSprite(const string& ResourceName, float scale)
+Sprite* SpriteManager::GetSprite(const string& ResourceName, float scale, IntRect r)
 {
 	auto itr = Sprites.find(ResourceName);
 	if (itr != Sprites.end())
@@ -38,7 +38,7 @@ Sprite* SpriteManager::GetSprite(const string& ResourceName, float scale)
 	else
 	{
 		Sprite* s = new Sprite;
-		*s = Sprite_Creator.CreateSprite(ResourceName, scale);
+		*s = Sprite_Creator.CreateSprite(ResourceName, scale, r);
 		Sprites.emplace(ResourceName, s);
 		return s;
 	}

@@ -50,5 +50,6 @@ void PlayState::PauseGame()
 {
 	Entity_Manager.ClearBase();
 	Sprite_Manager.ClearBase();
+	this->game->window.clear();
 	game->PushState(new PauseState(game));
 }

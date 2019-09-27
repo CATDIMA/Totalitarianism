@@ -10,10 +10,11 @@ Player::Player(float xpos, float ypos, float scale)
 	Ph_Pos.x = xpos / SCALE;
 	Ph_Pos.y = ypos / SCALE;
 
+	IntRect TextureRect(0, 0, 11 ,32);
 	Height = 32.0f;
 	Width = 32.0f;
 	
-	sprite = *Sprite_Manager.GetSprite("Player", Scale);
+	sprite = *Sprite_Manager.GetSprite("Player", Scale, TextureRect);
 	sprite.setPosition(Gr_Pos);
 
 	CurrentVelocity.x = 0;
