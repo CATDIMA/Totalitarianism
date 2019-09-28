@@ -6,15 +6,18 @@
 #include "SFML/Graphics.hpp"
 #include "Entity.h"
 #include "EntityManager.h"
+#include "LoadingScreen.h"
 
 using namespace sf;
 
 PlayState::PlayState(Game* game)
 {
+	this->game = game;
+	
+	LoadingScreen Loading;
+	Loading.DrawLoadScreen(0.55f, &this->game->window);
 	Sprite_Manager.FillTextureBase("game");
 	Entity_Manager.AddEntity<Player>(40.0f, 40.0f, 4.0f);
-
-	this->game = game;
 }
 
 void PlayState::HandleInput()

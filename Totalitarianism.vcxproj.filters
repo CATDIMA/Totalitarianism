@@ -34,7 +34,7 @@
     <Filter Include="Camera">
       <UniqueIdentifier>{17f31aa4-d615-421f-950b-04fdd8cbe5f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Player And Friends">
+    <Filter Include="Player And NPC%27s">
       <UniqueIdentifier>{ce9dcdcc-c527-4f49-9f6e-effd6402d564}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -70,13 +70,16 @@
       <Filter>Camera</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Player And Friends</Filter>
+      <Filter>Player And NPC%27s</Filter>
     </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Entity</Filter>
     </ClCompile>
     <ClCompile Include="EntityManager.cpp">
       <Filter>Managers\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingScreen.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -117,13 +120,16 @@
       <Filter>Camera</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Player And Friends</Filter>
+      <Filter>Player And NPC%27s</Filter>
     </ClInclude>
     <ClInclude Include="EntityManager.h">
       <Filter>Managers\Entities</Filter>
     </ClInclude>
     <ClInclude Include="WorldContainer.h">
-      <Filter>Managers</Filter>
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingScreen.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

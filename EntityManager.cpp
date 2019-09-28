@@ -35,7 +35,7 @@ void EntityManager::ClearBase()
 	if (Entities.empty()) cerr << "Entities destroyed" << endl;
 }
 
-int EntityManager::GetEntitiesSize()
+size_t EntityManager::GetEntitiesSize()
 {
 	return Entities.size();
 }

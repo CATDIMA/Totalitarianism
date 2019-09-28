@@ -3,6 +3,7 @@
 #include "PlayState.h"
 #include "GameState.h"
 #include "SFML/Graphics.hpp"
+#include "LoadingScreen.h"
 #include <cstdint>
 
 using namespace sf;
@@ -10,11 +11,13 @@ using namespace std;
 
 MenuState::MenuState(Game* game)
 {
+	this->game = game;
+
+	LoadingScreen Loading;
+	Loading.DrawLoadScreen(0.55f, &this->game->window);
 	IntRect MenuRect(0, 0, 1200, 675);
 	Sprite_Manager.FillTextureBase("menu");
 	MenuSprite = *(Sprite_Manager.GetSprite("MenuBackground", 1.0f, MenuRect));
-
-	this->game = game;
 }
 
 void MenuState::HandleInput()

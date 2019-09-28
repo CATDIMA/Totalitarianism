@@ -20,7 +20,7 @@ public:
 	void Refresh();
 	void EntitiesDraw(RenderWindow* w);
 	void ClearBase();
-	int GetEntitiesSize();
+	size_t GetEntitiesSize();
 	Entity* GetEntityList();
 
 	static EntityManager& GetEntityManager()
