@@ -149,6 +149,7 @@
     <ClCompile Include="SpriteManager.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="tinyxml2.cpp" />
+    <ClCompile Include="TmxLevel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="States.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="tinyxml2.h" />
+    <ClInclude Include="TmxLevel.h" />
     <ClInclude Include="WorldContainer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

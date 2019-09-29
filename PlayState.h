@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "EntityManager.h"
 #include "SpriteManager.h"
+#include "TmxLevel.h"
 
 class PlayState : public GameState
 {
@@ -18,4 +19,5 @@ private:
 	void PauseGame();
 	EntityManager& Entity_Manager = EntityManager::GetEntityManager();
 	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
+	TmxLevel Level;
 };

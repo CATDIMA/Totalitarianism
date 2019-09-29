@@ -16,8 +16,9 @@ PlayState::PlayState(Game* game)
 	
 	LoadingScreen Loading;
 	Loading.DrawLoadScreen(0.55f, &this->game->window);
+	Level.LoadFromFile("maps/main.tmx");
 	Sprite_Manager.FillTextureBase("game");
-	Entity_Manager.AddEntity<Player>(40.0f, 40.0f, 4.0f);
+	Entity_Manager.AddEntity<Player>(40.0f, 40.0f, 2.0f);
 }
 
 void PlayState::HandleInput()
@@ -46,6 +47,7 @@ void PlayState::Update(const float& dt)
 
 void PlayState::Draw(const float& dt)
 {
+	Level.Draw(this->game->window);
 	Entity_Manager.EntitiesDraw(&(this->game->window));
 }
 
