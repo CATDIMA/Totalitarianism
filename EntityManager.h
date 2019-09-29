@@ -22,6 +22,7 @@ public:
 	void ClearBase();
 	size_t GetEntitiesSize();
 	Entity* GetEntityList();
+	Entity* SearchEntityByTag(string tag);
 
 	static EntityManager& GetEntityManager()
 	{

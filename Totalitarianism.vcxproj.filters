@@ -37,6 +37,9 @@
     <Filter Include="Player And NPC%27s">
       <UniqueIdentifier>{ce9dcdcc-c527-4f49-9f6e-effd6402d564}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Control">
+      <UniqueIdentifier>{b62d178d-e0ec-44c8-b043-8e7972f01d88}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -83,6 +86,9 @@
     </ClCompile>
     <ClCompile Include="TmxLevel.cpp">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Control.cpp">
+      <Filter>Control</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +142,9 @@
     </ClInclude>
     <ClInclude Include="TmxLevel.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Control.h">
+      <Filter>Control</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

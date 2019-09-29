@@ -10,15 +10,13 @@ using namespace sf;
 
 class Entity
 {
-public:
-	Entity() {}
-	virtual ~Entity() {}
 protected:
 	const float SCALE = 30.0f;		//перевод метров Box2D в пиксели
 	const float DEG = 57.29577f;	//радиан в градусах
 	float Scale = 1; 
 	float density = 1.0f;
 	float friction = 1.0f;
+	string Tag;
 
 	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
 	WorldContainer& World_Container = WorldContainer::GetWorldContainer();
@@ -36,10 +34,16 @@ protected:
 	b2World* World = World_Container.GetWorld();
 	
 public:
+	Entity() {}
+	virtual ~Entity() {} 
+
 	void SetPosition(float pos_x, float pos_y);		//Координаты центра
 	void SetVelocity(float vel_x, float vel_y);
 	b2Vec2 GetVelocity();
+	b2Vec2 GetMaximumVelocity();
+	b2Body* GetBody();
 	Vector2f GetPosition();
+	string GetTag();
 	void Rotate(bool flag);							//true если может вращаться
 	void SetSprite(Sprite& s);
 	void SetScale(float scale);

@@ -3,6 +3,7 @@
 Player::Player(float xpos, float ypos, float scale)
 {
 	Scale = scale;
+	Tag = "Player";
 
 	Gr_Pos.x = xpos;
 	Gr_Pos.y = ypos;
@@ -36,7 +37,7 @@ Player::Player(float xpos, float ypos, float scale)
 
 	Body = World->CreateBody(&BodyDef);
 	Body->CreateFixture(&FixtureDef);
-	Body->SetUserData(&tag);
+	Body->SetUserData(&Tag);
 }
 
 Sprite Player::GetSprite()
@@ -51,6 +52,6 @@ void Player::Draw(RenderWindow* window)
 
 void Player::Update()
 {
-	
+	sprite.setPosition(Body->GetPosition().x, Body->GetPosition().y);
 }
 

@@ -21,6 +21,5 @@ public:
 private:
 	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
 	float Width, Height;
-	std::string tag = "Player";
 };
 

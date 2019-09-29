@@ -7,8 +7,11 @@
 #include "Entity.h"
 #include "EntityManager.h"
 #include "LoadingScreen.h"
+#include "Control.h"
 
 using namespace sf;
+
+Control control;
 
 PlayState::PlayState(Game* game)
 {
@@ -42,7 +45,7 @@ void PlayState::HandleInput()
 void PlayState::Update(const float& dt)
 {
 	cerr << 1 / dt << endl;
-	//Обновляем энтити
+	control.EnableKeyboard(Entity_Manager.SearchEntityByTag("Player"));
 }
 
 void PlayState::Draw(const float& dt)

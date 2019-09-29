@@ -2,13 +2,20 @@
 #include "SFML/Graphics.hpp"
 #include <iostream>
 #include <string>
+#include <algorithm>
 #include "Player.h"
 
 using namespace std;
 
 void EntityManager::Refresh()
 {
-	cerr << Entities.size() << endl;
+	if (!Entities.size())
+	{
+		for (auto itr : Entities)
+		{
+			itr->Update();
+		}
+	}
 }
 
 void EntityManager::EntitiesDraw(RenderWindow* w)
@@ -52,5 +59,15 @@ Entity* EntityManager::GetEntityList()
 	else
 	{
 		return nullptr;
+	}
+}
+
+Entity* EntityManager::SearchEntityByTag(string tag)
+{
+	for (auto i : Entities)
+	{
+		if (i->GetTag() == tag)
+			return i;
+		else return nullptr;
 	}
 }

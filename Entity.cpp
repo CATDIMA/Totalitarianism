@@ -25,9 +25,24 @@ b2Vec2 Entity::GetVelocity()
 	return CurrentVelocity;
 }
 
+b2Vec2 Entity::GetMaximumVelocity()
+{
+	return MaxVelocity;
+}
+
+b2Body* Entity::GetBody()
+{
+	return Body;
+}
+
 Vector2f Entity::GetPosition()
 {
 	return Gr_Pos;
+}
+
+string Entity::GetTag()
+{
+	return Tag;
 }
 
 void Entity::Rotate(bool flag)
