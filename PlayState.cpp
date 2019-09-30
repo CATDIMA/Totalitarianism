@@ -46,6 +46,7 @@ void PlayState::HandleInput()
 void PlayState::Update(const float& dt)
 {
 	cerr << 1 / dt << endl;
+	worldContainer.GetWorld()->Step(1 / 60.0f, 8, 3);
 	control.EnableKeyboard(Entity_Manager.SearchEntityByTag("Player"));
 }
 

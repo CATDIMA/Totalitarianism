@@ -7,9 +7,9 @@ void Entity::SetPositionFromPh(b2Vec2 Position)
 {
 	Gr_Pos.x = Position.x * SCALE;
 	Gr_Pos.y = Position.y * SCALE;
-	sprite.setPosition(Gr_Pos.x, Gr_Pos.y);
 
 	Ph_Pos = Position;
+	sprite.setPosition(Gr_Pos.x, Gr_Pos.y);
 }
 
 void Entity::SetVelocity(float vel_x, float vel_y)
