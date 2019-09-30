@@ -22,7 +22,8 @@ public:
 	void ClearBase();
 	size_t GetEntitiesSize();
 	Entity* GetEntityList();
-	Entity* SearchEntityByTag(string tag);
+	b2Body* SearchBodyByID(int id);
+	Entity* SearchEntityByTag(const char* tag);
 
 	static EntityManager& GetEntityManager()
 	{
@@ -31,8 +32,8 @@ public:
 	}
 private:
 	vector<Entity*> Entities;
-	static b2World* World;
+	WorldContainer& worldContainer = WorldContainer::GetWorldContainer();
 
-	EntityManager() {}
+	EntityManager() { }
 };
 

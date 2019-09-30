@@ -16,7 +16,8 @@ protected:
 	float Scale = 1; 
 	float density = 1.0f;
 	float friction = 1.0f;
-	string Tag;
+	const char* Tag = "";
+	int ID;
 
 	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
 	WorldContainer& World_Container = WorldContainer::GetWorldContainer();
@@ -37,17 +38,19 @@ public:
 	Entity() {}
 	virtual ~Entity() {} 
 
-	void SetPosition(float pos_x, float pos_y);		//Координаты центра
+	void SetPositionFromPh(b2Vec2 Position);		//Координаты центра
 	void SetVelocity(float vel_x, float vel_y);
 	b2Vec2 GetVelocity();
 	b2Vec2 GetMaximumVelocity();
 	b2Body* GetBody();
 	Vector2f GetPosition();
-	string GetTag();
+	const char* GetTag();
 	void Rotate(bool flag);							//true если может вращаться
 	void SetSprite(Sprite& s);
 	void SetScale(float scale);
 	float GetScale();
+	int GetID();
+
 	virtual void Update() = 0;
 	virtual void Draw(RenderWindow* window) = 0;
 };

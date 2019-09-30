@@ -3,15 +3,13 @@
 
 using namespace sf;
 
-void Entity::SetPosition(float pos_x, float pos_y)
+void Entity::SetPositionFromPh(b2Vec2 Position)
 {
-	Gr_Pos.x = pos_x;
-	Gr_Pos.y = pos_y;
-	sprite.setOrigin(Gr_Pos);
+	Gr_Pos.x = Position.x * SCALE;
+	Gr_Pos.y = Position.y * SCALE;
+	sprite.setPosition(Gr_Pos.x, Gr_Pos.y);
 
-	Ph_Pos.x = pos_x / SCALE;
-	Ph_Pos.y = pos_y / SCALE;
-	BodyDef.position.Set(Ph_Pos.x, Gr_Pos.y);
+	Ph_Pos = Position;
 }
 
 void Entity::SetVelocity(float vel_x, float vel_y)
@@ -40,7 +38,7 @@ Vector2f Entity::GetPosition()
 	return Gr_Pos;
 }
 
-string Entity::GetTag()
+const char* Entity::GetTag()
 {
 	return Tag;
 }
@@ -63,4 +61,9 @@ void Entity::SetScale(float scale)
 float Entity::GetScale()
 {
 	return Scale;
+}
+
+int Entity::GetID()
+{
+	return ID;
 }

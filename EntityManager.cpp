@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
-#include "Player.h"
+#include "WorldContainer.h"
 
 using namespace std;
 
@@ -62,12 +62,27 @@ Entity* EntityManager::GetEntityList()
 	}
 }
 
-Entity* EntityManager::SearchEntityByTag(string tag)
+b2Body* EntityManager::SearchBodyByID(int id)
 {
-	for (auto i : Entities)
+	b2Body* body = nullptr;
+	for (b2Body* itr = worldContainer.GetWorld()->GetBodyList(); itr != 0; itr = itr->GetNext())
 	{
-		if (i->GetTag() == tag)
-			return i;
+		if (itr->GetUserData() == (void*)(id))
+		{
+			body = itr;
+		}
+	}
+	return body;
+}
+
+Entity* EntityManager::SearchEntityByTag(const char* tag)
+{
+	for (auto itr : Entities)
+	{
+		if (itr->GetTag() == tag)
+		{
+			return itr;
+		}
 		else return nullptr;
 	}
 }
