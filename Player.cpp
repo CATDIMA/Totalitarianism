@@ -28,7 +28,7 @@ Player::Player(float xpos, float ypos, float scale)
 	Ph_Shape.SetAsBox(Width * Scale / SCALE, Height * Scale / SCALE);
 	FixtureDef.shape = &Ph_Shape;
 	FixtureDef.friction = friction;
-	FixtureDef.density = density;
+	FixtureDef.density = 0.5f;
 	BodyDef.position.Set(Ph_Pos.x, Ph_Pos.y);
 
 	BodyDef.type = b2_dynamicBody;

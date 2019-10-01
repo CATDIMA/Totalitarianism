@@ -5,6 +5,7 @@
 #include "SpriteManager.h"
 #include "TmxLevel.h"
 #include "WorldContainer.h"
+#include "Camera.h"
 
 class PlayState : public GameState
 {

@@ -9,7 +9,7 @@
 using namespace std;
 using namespace sf;
 
-int ResolutionX = 1200;		//А потом это рефакторить что-ли?
+int ResolutionX = 1280;		//А потом это рефакторить что-ли?
 int ResolutionY = 720;		//
 bool Vsync = true;			//А, ну да
 bool Fullscreen = false;	//БЛИН

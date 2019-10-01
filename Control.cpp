@@ -9,32 +9,33 @@ void Control::EnableKeyboard(Entity* ent)
 	b2Body* body = entityManager.SearchBodyByID(1);
 	b2Vec2 MaximumVelocity = ent->GetMaximumVelocity();
 	b2Vec2 Velocity = body->GetLinearVelocity();
+
 	if (Keyboard::isKeyPressed(Keyboard::A))
 	{
 	if (Velocity.x > -MaximumVelocity.x)
 		{
-			body->SetLinearVelocity(b2Vec2(-MaximumVelocity.x, 0.0f));
+			body->ApplyLinearImpulseToCenter(b2Vec2(-MaximumVelocity.x * 5, Velocity.y), 1);
 		}
 	}
 	else if (Keyboard::isKeyPressed(Keyboard::D))
 	{
 		if (Velocity.x < MaximumVelocity.x)
 		{
-			body->SetLinearVelocity(b2Vec2(MaximumVelocity.x, 0.0f));
+			body->ApplyLinearImpulseToCenter(b2Vec2(MaximumVelocity.x * 5, Velocity.y), 1);
 		}
 	}
 	else if (Keyboard::isKeyPressed(Keyboard::S))
 	{
 		if (Velocity.y < MaximumVelocity.y)
 		{
-			body->SetLinearVelocity(b2Vec2(0.0f, MaximumVelocity.y));
+			body->ApplyLinearImpulseToCenter(b2Vec2(Velocity.x, MaximumVelocity.y * 5), 1);
 		}
 	}
 	else if (Keyboard::isKeyPressed(Keyboard::W))
 	{
 		if (Velocity.y > -MaximumVelocity.y)
 		{
-			body->SetLinearVelocity(b2Vec2(0.0f, -MaximumVelocity.y));
+			body->ApplyLinearImpulseToCenter(b2Vec2(Velocity.x, -MaximumVelocity.y * 5), 1);
 		}
 	}
 	else

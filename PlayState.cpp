@@ -12,6 +12,7 @@
 using namespace sf;
 
 Control control;
+Camera camera(1200.0f, 720.0f);
 
 PlayState::PlayState(Game* game)
 {
@@ -52,6 +53,8 @@ void PlayState::Update(const float& dt)
 
 void PlayState::Draw(const float& dt)
 {
+	camera.SetView(Entity_Manager.SearchEntityByTag("Player")->GetPosition());
+	this->game->window.setView(*camera.GetView());
 	Level.Draw(this->game->window);
 	Entity_Manager.EntitiesDraw(&(this->game->window));
 }
