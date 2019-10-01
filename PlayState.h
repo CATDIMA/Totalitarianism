@@ -23,4 +23,5 @@ private:
 	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
 	WorldContainer& worldContainer = WorldContainer::GetWorldContainer();
 	TmxLevel Level;
+	
 };

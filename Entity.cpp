@@ -38,6 +38,13 @@ Vector2f Entity::GetPosition()
 	return Gr_Pos;
 }
 
+Vector2f Entity::GetCenter()
+{
+	Gr_Pos.x - Width / 2;
+	Gr_Pos.y - Height / 2;
+	return Gr_Pos;
+}
+
 const char* Entity::GetTag()
 {
 	return Tag;

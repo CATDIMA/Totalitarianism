@@ -12,7 +12,7 @@
 using namespace sf;
 
 Control control;
-Camera camera(1200.0f, 720.0f);
+Camera camera(1280, 720);	//Захардкожено
 
 PlayState::PlayState(Game* game)
 {
@@ -23,6 +23,7 @@ PlayState::PlayState(Game* game)
 	Level.LoadFromFile("maps/main.tmx");
 	Sprite_Manager.FillTextureBase("game");
 	Level.Draw(this->game->window);
+	camera.SetMapSize(static_cast<int>(Level.GetTilemapWidth()), static_cast<int>(Level.GetTilemapHeight()));
 	Entity_Manager.AddEntity<Player>(120.0f, 100.0f, 2.0f);
 }
 
@@ -53,7 +54,7 @@ void PlayState::Update(const float& dt)
 
 void PlayState::Draw(const float& dt)
 {
-	camera.SetView(Entity_Manager.SearchEntityByTag("Player")->GetPosition());
+	camera.SetView(Entity_Manager.SearchEntityByTag("Player")->GetCenter());
 	this->game->window.setView(*camera.GetView());
 	Level.Draw(this->game->window);
 	Entity_Manager.EntitiesDraw(&(this->game->window));
@@ -61,6 +62,8 @@ void PlayState::Draw(const float& dt)
 
 void PlayState::PauseGame()
 {
+	this->game->window.getDefaultView();
+	camera.~Camera();
 	Entity_Manager.ClearBase();
 	Sprite_Manager.ClearBase();
 	this->game->window.clear();

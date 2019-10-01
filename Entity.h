@@ -16,8 +16,10 @@ protected:
 	float Scale = 1; 
 	float density = 1.0f;
 	float friction = 1.0f;
+	float Width = 0;
+	float Height = 0;
 	const char* Tag = "";
-	int ID;
+	int ID = 0;
 
 	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
 	WorldContainer& World_Container = WorldContainer::GetWorldContainer();
@@ -44,6 +46,7 @@ public:
 	b2Vec2 GetMaximumVelocity();
 	b2Body* GetBody();
 	Vector2f GetPosition();
+	Vector2f GetCenter();
 	const char* GetTag();
 	void Rotate(bool flag);							//true если может вращаться
 	void SetSprite(Sprite& s);
