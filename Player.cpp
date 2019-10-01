@@ -38,6 +38,7 @@ Player::Player(float xpos, float ypos, float scale)
 
 	Body = World->CreateBody(&BodyDef);
 	Body->CreateFixture(&FixtureDef);
+	Body->SetLinearDamping(100);
 	Body->SetUserData((void*)(1));
 }
 
