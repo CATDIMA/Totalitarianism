@@ -18,13 +18,13 @@ void EntityManager::Refresh()
 	}
 }
 
-void EntityManager::EntitiesDraw(RenderWindow* w)
+void EntityManager::EntitiesDraw(RenderWindow* w, float dt)
 {
 	if (!Entities.empty())
 	{
 		for (auto itr : Entities)
 		{
-			itr->Draw(w);
+			itr->Draw(w, dt);
 		}
 	}
 }

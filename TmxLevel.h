@@ -53,7 +53,7 @@ class TmxLevel
     // Рисует все слои тайлов один за другим,
     //  но не рисует объекты (рисованием которых должна заниматься игра).
     // Принимает любую цель для рисования, например, sf::RenderWindow.
-    void Draw(sf::RenderTarget &target) const;
+    void Draw(sf::RenderTarget* target) const;
 
   private:
     int m_width = 0;

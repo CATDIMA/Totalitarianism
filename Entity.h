@@ -7,6 +7,14 @@
 #include <vector>
 
 using namespace sf;
+enum State
+{
+	IDLE,
+	LEFT,
+	RIGHT,
+	UP,
+	DOWN,
+};
 
 class Entity
 {
@@ -20,12 +28,17 @@ protected:
 	float Height = 0;
 	const char* Tag = "";
 	int ID = 0;
+	int Frames = 0;
+	int Rows = 0;
+	int AnimationSpeed = 0;
+	State CurrentState = IDLE;
 
 	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
 	WorldContainer& World_Container = WorldContainer::GetWorldContainer();
 
 	Sprite sprite;					//Параметры спрайта
 	Vector2f Gr_Pos;
+	IntRect InitRect;
 
 	b2Vec2 CurrentVelocity;
 	b2Vec2 MaxVelocity;
@@ -39,7 +52,7 @@ protected:
 public:
 	Entity() {}
 	virtual ~Entity() {} 
-
+	
 	void SetPositionFromPh(b2Vec2 Position);		//Координаты центра
 	void SetVelocity(float vel_x, float vel_y);
 	b2Vec2 GetVelocity();
@@ -53,8 +66,16 @@ public:
 	void SetScale(float scale);
 	float GetScale();
 	int GetID();
+	State GetState();
+	void SetState(State state);
+	IntRect GetRect();
+	void SetRect(IntRect rect);
+	int GetFrames();
+	int GetRows();
+	int GetAnimationSpeed();
+	Sprite* GetSprite();
 
 	virtual void Update() = 0;
-	virtual void Draw(RenderWindow* window) = 0;
+	virtual void Draw(RenderWindow* window, float dt) = 0;
 };
 

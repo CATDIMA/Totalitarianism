@@ -389,9 +389,9 @@ sf::Vector2f TmxLevel::GetTilemapSize() const
     return sf::Vector2f(GetTilemapWidth(), GetTilemapHeight());
 }
 
-void TmxLevel::Draw(sf::RenderTarget &target) const
+void TmxLevel::Draw(sf::RenderTarget* target) const
 {
-    const sf::FloatRect viewportRect = target.getView().getViewport();
+    const sf::FloatRect viewportRect = target->getView().getViewport();
 
     // Draw all tiles (and don't draw objects)
     for (const auto &layer : m_layers)
@@ -400,7 +400,7 @@ void TmxLevel::Draw(sf::RenderTarget &target) const
         {
             if (viewportRect.intersects(tile.getLocalBounds()))
             {
-                target.draw(tile);
+                target->draw(tile);
             }
         }
     }

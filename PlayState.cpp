@@ -8,8 +8,10 @@
 #include "EntityManager.h"
 #include "LoadingScreen.h"
 #include "Control.h"
+#include "Animation.h"
 
 using namespace sf;
+using namespace std;
 
 Control control;
 Camera camera(1280, 720);	//Захардкожено
@@ -22,7 +24,7 @@ PlayState::PlayState(Game* game)
 	Loading.DrawLoadScreen(0.55f, &this->game->window);
 	Level.LoadFromFile("maps/main.tmx");
 	Sprite_Manager.FillTextureBase("game");
-	Level.Draw(this->game->window);
+	Level.Draw(&this->game->window);
 	camera.SetMapSize(static_cast<int>(Level.GetTilemapWidth()), static_cast<int>(Level.GetTilemapHeight()));
 	Entity_Manager.AddEntity<Player>(120.0f, 100.0f, 2.0f);
 }
@@ -56,16 +58,16 @@ void PlayState::Draw(const float& dt)
 {
 	camera.SetView(Entity_Manager.SearchEntityByTag("Player")->GetCenter());
 	this->game->window.setView(*camera.GetView());
-	Level.Draw(this->game->window);
-	Entity_Manager.EntitiesDraw(&(this->game->window));
+	Level.Draw(&this->game->window);
+	Entity_Manager.EntitiesDraw(&(this->game->window), dt);
 }
 
 void PlayState::PauseGame()
 {
+	this->game->window.clear();
 	this->game->window.getDefaultView();
 	camera.~Camera();
 	Entity_Manager.ClearBase();
 	Sprite_Manager.ClearBase();
-	this->game->window.clear();
 	game->PushState(new PauseState(game));
 }

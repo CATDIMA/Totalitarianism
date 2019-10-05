@@ -20,6 +20,8 @@ WorldContainer& Container = WorldContainer::GetWorldContainer();
 
 int main()
 {
+	ContextSettings settings;
+	settings.antialiasingLevel = 16;
 	Game game(ResolutionX, ResolutionY, Vsync, Fullscreen);
 	Container.SetWorld(&World);
 

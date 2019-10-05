@@ -2,6 +2,7 @@
 #include "SFML/Graphics.hpp"
 #include "Box2D/Box2D.h"
 #include "Entity.h"
+#include "Animation.h"
 #include <vector>
 
 using namespace sf;
@@ -18,7 +19,7 @@ public:
 	}
 
 	void Refresh();
-	void EntitiesDraw(RenderWindow* w);
+	void EntitiesDraw(RenderWindow* w, float dt);
 	void ClearBase();
 	size_t GetEntitiesSize();
 	Entity* GetEntityList();
@@ -33,6 +34,8 @@ public:
 private:
 	vector<Entity*> Entities;
 	WorldContainer& worldContainer = WorldContainer::GetWorldContainer();
+	SpriteManager& spriteManager = SpriteManager::GetSpriteManager();
+	Animation Animator;
 
 	EntityManager() { }
 };

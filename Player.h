@@ -4,6 +4,7 @@
 #include "Entity.h"
 #include "Box2D/Box2D.h"
 #include "Game.h"
+#include "Animation.h"
 #include <string>
 
 using namespace sf;
@@ -15,10 +16,11 @@ public:
 
 	Sprite GetSprite();
 
-	void Draw(RenderWindow *window) override;
+	void Draw(RenderWindow *window, float dt) override;
 	void Update() override;
 
 private:
 	SpriteManager& Sprite_Manager = SpriteManager::GetSpriteManager();
+	Animation Animator;
 };
 

@@ -12,11 +12,18 @@ Player::Player(float xpos, float ypos, float scale)
 	Ph_Pos.x = xpos / SCALE;
 	Ph_Pos.y = ypos / SCALE;
 
-	IntRect TextureRect(0, 0, 11 ,32);
 	Height = 32.0f;
-	Width = 32.0f;
-	
-	sprite = *Sprite_Manager.GetSprite("Player", Scale, TextureRect);
+	Width = 11.0f;
+
+	InitRect.left = 0;
+	InitRect.top = 0;
+	InitRect.width = Width;
+	InitRect.height = Height;
+
+	Frames = 3;
+	AnimationSpeed = 12;
+
+	sprite = *Sprite_Manager.GetSprite("Player", Scale, InitRect);
 	sprite.setPosition(Gr_Pos);
 
 	CurrentVelocity.x = 0;
@@ -47,8 +54,10 @@ Sprite Player::GetSprite()
 	return sprite;
 }
 
-void Player::Draw(RenderWindow* window)
+void Player::Draw(RenderWindow* window, float dt)
 {
+	Animator.Animate(this, dt);
+	sprite.setTextureRect(InitRect);
 	window->draw(sprite);
 }
 

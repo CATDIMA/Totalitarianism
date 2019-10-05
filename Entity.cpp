@@ -74,3 +74,43 @@ int Entity::GetID()
 {
 	return ID;
 }
+
+State Entity::GetState()
+{
+	return CurrentState;
+}
+
+void Entity::SetState(State state)
+{
+	CurrentState = state;
+}
+
+IntRect Entity::GetRect()
+{
+	return InitRect;
+}
+
+void Entity::SetRect(IntRect rect)
+{
+	InitRect = rect;
+}
+
+int Entity::GetFrames()
+{
+	return Frames;
+}
+
+int Entity::GetRows()
+{
+	return Rows;
+}
+
+int Entity::GetAnimationSpeed()
+{
+	return AnimationSpeed;
+}
+
+Sprite* Entity::GetSprite()
+{
+	return &sprite;
+}

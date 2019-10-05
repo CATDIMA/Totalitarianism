@@ -1,5 +1,3 @@
-//GOVNO, PEREDELbIVAI
-
 #pragma once
 #include "SFML\Graphics.hpp"
 
